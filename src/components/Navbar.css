@@ -19,6 +19,10 @@ nav {
 .nav_toggle-btn {
   display: none;
 }
+.gym {
+  color: #f6b032;
+  padding-left: 0.5rem;
+}
 .logo {
   width: 7rem;
   display: block;
@@ -27,6 +31,7 @@ nav {
   display: flex;
   gap: 3.5rem;
   align-items: center;
+  font-size: 1.1rem;
 }
 .nav_links a {
   transition: var(--transition);
@@ -34,7 +39,7 @@ nav {
 .nav_links a:hover {
   color: var(--color-secondary);
 }
-.active-nav {
+/* .active-nav {
   position: relative;
 }
 .active-nav::after {
@@ -47,7 +52,7 @@ nav {
   left: calc(50% - 0.6rem);
   transform: rotate(45deg);
   margin-top: 0.9rem;
-}
+} */
 
 /*Media query*/
 

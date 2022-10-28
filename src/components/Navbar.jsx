@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import Logo from "../images/logo.png";
+// import Logo from "../images/logo.png";
 import { links } from "../data";
 import { Link, NavLink } from "react-router-dom";
 import { GoThreeBars } from "react-icons/go";
@@ -17,7 +17,10 @@ const Navbar = () => {
     <nav>
       <div className="container nav_container">
         <Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
-          <img src={Logo} alt="Nav Logo" />
+          {/* <img src={Logo} alt="Nav Logo" /> */}
+          <h3 className="lloyd">
+            Lloyd's<span className="gym">Gym</span>
+          </h3>
         </Link>
         <ul className={`nav_links ${isNavShowing ? "show_nav" : "hide_nav"}`}>
           {links.map(({ name, path }, index) => {
@@ -41,6 +44,7 @@ const Navbar = () => {
         <button
           className="nav_toggle-btn"
           onClick={() => setIsNavShowing((prev) => !prev)}
+          // onClick={() => setIsNavShowing(!isNavShowing)}
         >
           {isNavShowing ? <MdOutlineClose /> : <GoThreeBars />}
         </button>
